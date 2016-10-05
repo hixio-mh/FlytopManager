@@ -1909,9 +1909,9 @@ namespace MissionPlanner
             if (licensekey.Equals("00000") && !CheckForInternetConnection())
             {
 
-                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 60 sec senza registrazione");
+                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
                 MyTimer = new System.Timers.Timer();
-                        MyTimer.Interval = 1000;
+                        MyTimer.Interval = 1000*180;
                         MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
                         MyTimer.Start();
                     
@@ -1921,9 +1921,9 @@ namespace MissionPlanner
             if (!Properties.Settings.Default.islicensed)
             {
 
-                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 2 minuti senza registrazione");
+                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
                 MyTimer = new System.Timers.Timer();
-                MyTimer.Interval = 1000;
+                MyTimer.Interval = 1000*180;
                 MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
                 MyTimer.Start();
 
