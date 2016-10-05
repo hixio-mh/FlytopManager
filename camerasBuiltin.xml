@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<Cameras>
+  <Camera>
+    <name>FLYGEO 16 MPX</name>
+    <flen>4.2</flen>
+    <imgh>3456</imgh>
+    <imgw>4608</imgw>
+    <senh>4.62</senh>
+    <senw>6.16</senw>
+  </Camera>
+  <Camera>
+    <name>FLYGEO 24 MPX</name>
+    <flen>16.0</flen>
+    <imgh>4000</imgh>
+    <imgw>6000</imgw>
+    <senh>15.6</senh>
+    <senw>23.5</senw>
+  </Camera>
+  <Camera>
+    <name>FLYNOVEX</name>
+    <flen>18.0</flen>
+    <imgh>3456</imgh>
+    <imgw>5184</imgw>
+    <senh>14.9</senh>
+    <senw>22.3</senw>
+  </Camera>
+  <Camera>
+    <name>FLYSMART</name>
+    <flen>16.0</flen>
+    <imgh>4000</imgh>
+    <imgw>6000</imgw>
+    <senh>15.6</senh>
+    <senw>23.5</senw>
+  </Camera>
+</Cameras>
