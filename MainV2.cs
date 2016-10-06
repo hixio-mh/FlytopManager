@@ -1870,75 +1870,10 @@ namespace MissionPlanner
 
             Program.Splash.Close();
 
-            String licensekey = Properties.Settings.Default.license;
 
+            this.Text = "Flytop Manager powered by Mission Planner";
 
-
-            if (licensekey.Equals("00000") && CheckForInternetConnection())
-            {
-                Registerform register = new Registerform();
-                // register.Parent = this;
-                //register.StartPosition = FormStartPosition.CenterParent;
-                DialogResult result = register.ShowDialog(this);
-                if (result == DialogResult.OK)
-                {
-                    if (!Properties.Settings.Default.islicensed)
-                    {
-                        MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
-                        MyTimer = new System.Timers.Timer();
-                        MyTimer.Interval = 1000*180;
-                        MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
-                        MyTimer.Start();
-                    }
-
-                }
-                else
-                {
-                    if (result == DialogResult.Cancel && licensekey.Equals("00000"))
-                    {
-                        MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
-                        MyTimer = new System.Timers.Timer();
-                        MyTimer.Interval = 1000*180;
-                        MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
-                        MyTimer.Start();
-                    }
-                }
-
-            }
-
-            if (licensekey.Equals("00000") && !CheckForInternetConnection())
-            {
-
-                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
-                MyTimer = new System.Timers.Timer();
-                        MyTimer.Interval = 1000*180;
-                        MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
-                        MyTimer.Start();
-                    
-              }
-
-
-            if (!Properties.Settings.Default.islicensed)
-            {
-
-                MessageBox.Show("Versione in modalità Demo!\n potrai utilizzare questa versione solo per 3 minuti senza registrazione");
-                MyTimer = new System.Timers.Timer();
-                MyTimer.Interval = 1000*180;
-                MyTimer.Elapsed += new System.Timers.ElapsedEventHandler(myTimer_Elapsed);
-                MyTimer.Start();
-
-            }
-            else
-            {
-                this.Text = "Flytop Manager - licenziato a " + Properties.Settings.Default.owner + "  ( Station ID: " + Properties.Settings.Default.license+" )";
-         
-               
-                 string urlloglogin = "http://www.flytop.it/ftm/logger.php?license="+ Properties.Settings.Default.license;
-                 var task = MakeAsyncRequest(urlloglogin, "text/html");
-                 
-
-                
-            }
+           
             /*
             try
             {
